@@ -88,9 +88,9 @@ function GameResultModal({ setGameState, onRestart }) {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{(!failed || !currentPlayer) ? "등외" : `${currentPlayer.rank}위`}</td>
+                            <td>{(failed || !currentPlayer) ? "등외" : `${currentPlayer.rank}위`}</td>
                             <td>{username}</td>
-                            <td>{!failed ? "실패" : formatTime(clearTime)}</td>
+                            <td>{failed ? "실패" : formatTime(clearTime)}</td>
                         </tr>
                     </tbody>
                 </table>
